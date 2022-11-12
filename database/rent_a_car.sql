@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Nov 12, 2022 at 12:11 PM
+-- Generation Time: Nov 12, 2022 at 12:28 PM
 -- Server version: 5.7.36
 -- PHP Version: 7.4.26
 
@@ -40,6 +40,7 @@ CREATE TABLE IF NOT EXISTS `cars_table` (
   `fileName` text NOT NULL,
   `model_year` int(11) NOT NULL,
   `sellerId` int(11) NOT NULL,
+  `place` varchar(50) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
@@ -47,9 +48,9 @@ CREATE TABLE IF NOT EXISTS `cars_table` (
 -- Dumping data for table `cars_table`
 --
 
-INSERT INTO `cars_table` (`id`, `name`, `number`, `rate`, `color`, `insurence`, `car_condition`, `isBooked`, `fileName`, `model_year`, `sellerId`) VALUES
-(4, 'Swift', 'KL 10 v 1234', 5000, 'Red', 'asgdhslkag', 'Super', 0, '1668248440.jpg', 2012, 1),
-(6, 'Bolero', 'KL 10 v o743', 1000, 'White', '17/10/2001', 'not bad', 0, '1668250308.jpeg', 2022, 1);
+INSERT INTO `cars_table` (`id`, `name`, `number`, `rate`, `color`, `insurence`, `car_condition`, `isBooked`, `fileName`, `model_year`, `sellerId`, `place`) VALUES
+(4, 'Swift', 'KL 10 v 1234', 5000, 'Red', 'asgdhslkag', 'Super', 0, '1668248440.jpg', 2012, 1, 'idukki'),
+(6, 'Bolero', 'KL 10 v o743', 1000, 'White', '17/10/2001', 'not bad', 1, '1668250308.jpeg', 2022, 1, 'kottayam');
 
 -- --------------------------------------------------------
 
@@ -65,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `payments_table` (
   `date` date NOT NULL,
   `rate` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `payments_table`
@@ -73,7 +74,10 @@ CREATE TABLE IF NOT EXISTS `payments_table` (
 
 INSERT INTO `payments_table` (`id`, `userId`, `carId`, `date`, `rate`) VALUES
 (1, 9, 4, '2022-11-02', 5000),
-(3, 9, 4, '2022-11-30', 5000);
+(3, 9, 4, '2022-11-30', 5000),
+(4, 9, 6, '2022-11-12', 1000),
+(5, 9, 6, '2022-11-12', 1000),
+(6, 9, 6, '2022-11-12', 1000);
 
 -- --------------------------------------------------------
 
