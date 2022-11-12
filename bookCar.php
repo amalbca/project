@@ -14,4 +14,3 @@ $userId = $_SESSION['userId'];
         //payment failur
     }
     ?>
-    <!-- fucked up -->
