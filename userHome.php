@@ -81,7 +81,7 @@ if (!isset($_SESSION['userId'])) {
             $name = $_GET['name'];
             $conn = mysqli_connect("localhost", "root", "", "rent_a_car") or die(mysqli_connect_error());
             $avaibleCars = mysqli_query($conn,"
-            SELECT * FROM `cars_table` WHERE isBooked is false AND name like '%$name%'
+            SELECT * FROM `cars_table` WHERE isBooked is false AND place like '%$name%'
             ");
             foreach($avaibleCars as $car){
                 foreach($car as $key => $value){

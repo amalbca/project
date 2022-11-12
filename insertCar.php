@@ -21,8 +21,8 @@ if (isset($_SESSION['sellerId'])) {
     // .
     // fileName = '$fileName
 
-    $sql = "INSERT INTO `cars_table` (`id`, `name`, `number`, `rate`, `color`, `insurence`, `car_condition`, `fileName`,`model_year`. `sellerId`)
- VALUES (NULL, '$name', '$number', '$rate', '$color', '$insurence', '$car_condition', '$fileName','$model_year',$sellerId)";
+    $sql = "INSERT INTO `cars_table` (`id`, `name`, `number`, `rate`, `color`, `insurence`, `car_condition`, `fileName`,`model_year`. `sellerId`, `place`)
+ VALUES (NULL, '$name', '$number', '$rate', '$color', '$insurence', '$car_condition', '$fileName','$model_year',$sellerId,$place)";
 
     if (mysqli_query($conn, $sql)) {
 

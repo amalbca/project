@@ -85,6 +85,7 @@ if(!isset($_SESSION['sellerId'])){
     <input name="insurence" placeholder="Insurence Details" type="text">
     <input name="car_condition" placeholder="Condition" type="text">
     <input name="model_year" placeholder="Model year" type="number">
+    <input name="place" placeholder="place" type="place">
     <input type="file" accept="image/*" name="carImage" id="carImage">
     <input type="submit" value="Create">
 </form>
